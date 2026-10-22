@@ -13,19 +13,19 @@ related_targets: []
 
 - Audience: Spa Ceylon gift shoppers in Sri Lanka, often on phones, arriving from campaign channels.
 - Action: Explore the range (lk.spaceylon.com/pages/festive-2026) is primary; Read the Legend (moonlight.spaceylon.com) is secondary. Both sit on the key visual; there is nothing else to click.
-- Proof and content: the key visual itself, which shows the range, the queen and the palace night, plus one line of copy. No prices, no invented claims.
-- User direction (22 October 2026): the page is a single full-screen hero. Removed in turn: the header and footer, the product listings, the closing quote, then the Legend retelling and The Collection band. Phones load the user's dedicated 1080x540 mobile key visual.
+- Proof and content: the key visual itself, which shows the range, the queen and the palace night, and no running text. No prices, no invented claims.
+- User direction (22 October 2026): the page is a single full-screen hero. Removed in turn: the header and footer, the product listings, the closing quote, then the Legend retelling and The Collection band. Phones load the user's dedicated 1080x540 mobile key visual. Last, the user removed the line of copy under the buttons.
 - Constraints: the key visual's fonts and colours (user-pinned). The banner carries baked-in words, so the hero exposes them as text.
 
 ## Direction contract
 
 THESIS: The page is the night of the legend: the key visual's palace night becomes the whole screen, and the collection is presented on that stage. It refuses the category default of a banner strip above a product grid.
 
-OWN-WORLD: A night-slate sky (#1b1a23) with a low lantern-blush glow behind the actions. Cream-gold Trajan capitals (#fef3ca) on the buttons, and a Goudy italic narrative voice. Lotus coral and lantern blush appear only as light (the glow, the button underglow, text selection), never as fields. The key visual is feathered into the night with no frame, and nothing else ornaments the page. As shipped; DESIGN.md is the system of record.
+OWN-WORLD: A night-slate sky (#1b1a23) with a low lantern-blush glow behind the actions. Cream-gold Trajan capitals (#fef3ca) on the buttons; the key visual carries every other word. Lotus coral and lantern blush appear only as light (the glow, the button underglow, text selection), never as fields. The key visual is feathered into the night with no frame, and nothing else ornaments the page. As shipped; DESIGN.md is the system of record.
 
 STORY: The visitor sees the collection presented on a stage, the queen enthroned beside the gifts under the palace night. They understand this is Spa Ceylon's festive collection, then click Explore the range, or Read the Legend to hear the story behind it.
 
-FIRST VIEWPORT: The whole page is one screen at every size (user direction). There is no top bar. The key visual sits centred in the night, sized to the screen so the actions always fit. On landscape screens the 3:1 desktop plate narrows on short laptops, overscans the width by up to 12% on tall screens, and never upscales past 2400px. Portrait screens load the 2:1 mobile plate at 1.6:1, so the title, the gifts and the queen's face stay in frame. The primary Explore the range button (cream-gold fill, oxblood text) and Read the Legend (gold outline) overlap the plate's lower fade and scale with the screen, and one Goudy italic line follows.
+FIRST VIEWPORT: The whole page is one screen at every size (user direction). There is no top bar. The key visual sits centred in the night, sized to the screen so the actions always fit. On landscape screens the 3:1 desktop plate narrows on short laptops, overscans the width by up to 12% on tall screens, and never upscales past 2400px. Portrait screens load the 2:1 mobile plate at 1.6:1, so the title, the gifts and the queen's face stay in frame. The primary Explore the range button (cream-gold fill, oxblood text) and Read the Legend (gold outline) overlap the plate's lower fade and scale with the screen. Nothing follows them (the user removed the line of copy).
 
 FORM: brief-pinned world (the supplied key visual's palace night), position 1 of 1. Signature moment: the unveil, as the palace's lamps come up when the page opens (brightness and saturation rise while the plate settles). The Legend's lamp-kindling path was retired with the Legend section. seed: none. The roll was available but deliberately skipped, because the user's brief pinned the world: "use the same fonts same colors" as the supplied key visual.
 

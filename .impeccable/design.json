@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-10-22T22:00:00+05:30",
+  "generatedAt": "2026-10-22T20:57:10+05:30",
   "title": "Design System: Moonlight Lilies",
   "extensions": {
     "colorMeta": {
@@ -139,21 +139,6 @@
           "#faf5ec"
         ]
       },
-      "text-soft": {
-        "role": "neutral",
-        "displayName": "Faded Parchment",
-        "canonical": "#c9b79c",
-        "tonalRamp": [
-          "#2b251c",
-          "#4a4134",
-          "#6d6250",
-          "#93866f",
-          "#b8a88e",
-          "#c9b79c",
-          "#ecdfc9",
-          "#faf5ec"
-        ]
-      },
       "rule-strong": {
         "role": "secondary",
         "displayName": "Strong Gold Hairline",
@@ -164,10 +149,6 @@
       "label": {
         "displayName": "Label",
         "purpose": "Uppercase Trajan button text; the button is em-sized from it."
-      },
-      "note": {
-        "displayName": "Note",
-        "purpose": "The single Goudy italic line under the hero actions, in text-soft, 48ch."
       }
     },
     "shadows": [
@@ -201,7 +182,7 @@
       {
         "name": "rise",
         "value": "1.4s ease-out 0.8s both; from opacity 0.3, translateY(10px)",
-        "purpose": "Hero actions and note settle after the unveil."
+        "purpose": "Hero actions settle after the unveil."
       },
       {
         "name": "reduced-motion",
@@ -223,7 +204,7 @@
     ],
     "layout": {
       "vh": "100vh, 100svh where supported",
-      "hero-reserve": "clamp(9rem, calc(var(--vh) * 0.26), 14rem)",
+      "hero-reserve": "clamp(6rem, calc(var(--vh) * 0.18), 10rem)",
       "hero-width-landscape": "min(112%, 150rem, calc((var(--vh) - var(--hero-reserve)) * 3))",
       "hero-width-portrait": "min(100%, calc((var(--vh) - var(--hero-reserve)) * 1.6))",
       "actions-overlap": "clamp(-5rem, calc(var(--hero-w) * -0.05), -1.25rem); -1.5rem at 760px and below"
@@ -250,17 +231,17 @@
       "name": "Feathered Key-Visual Hero",
       "kind": "custom",
       "refersTo": "hero",
-      "description": "The whole page: one full screen, the masked key visual as the h1, the two actions overlapping its lower fade, and one italic note. Unveil and rise on load.",
-      "html": "<section class=\"ds-hero\"><div class=\"ds-hero-art\"></div><div class=\"ds-hero-actions\"><a class=\"ds-btn ds-btn-primary\" href=\"#\">Explore the range <svg class=\"ds-arrow\" viewBox=\"0 0 24 12\" aria-hidden=\"true\"><path d=\"M0 6h22M17 1l5 5-5 5\"/></svg></a><a class=\"ds-btn ds-btn-quiet\" href=\"#\">Read the Legend</a></div><p class=\"ds-hero-note\">This season, the legend comes alive once more.</p></section>",
-      "css": ".ds-hero { display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 24rem; padding: 2rem 0; text-align: center; background: radial-gradient(55% 45% at 50% 62%, rgb(252 182 160 / 0.1), transparent 72%), var(--night-900, #1b1a23); overflow: hidden; } .ds-hero-art { width: 100%; aspect-ratio: 3 / 1; background: radial-gradient(40% 60% at 50% 40%, #e3c47a, transparent), linear-gradient(#2a2833, #2a1012); -webkit-mask-image: linear-gradient(90deg, transparent, #000 7%, #000 93%, transparent), linear-gradient(transparent, #000 6%, #000 66%, transparent 99%); -webkit-mask-composite: source-in; mask-image: linear-gradient(90deg, transparent, #000 7%, #000 93%, transparent), linear-gradient(transparent, #000 6%, #000 66%, transparent 99%); mask-composite: intersect; animation: ds-unveil 2.4s cubic-bezier(0.16, 1, 0.3, 1) both; } .ds-hero-actions { position: relative; display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; margin-top: -1.5rem; padding-inline: 1rem; animation: ds-rise 1.4s cubic-bezier(0.16, 1, 0.3, 1) 0.8s both; } .ds-hero-note { max-width: 48ch; margin: 1.25rem auto 0; padding-inline: 1rem; font-family: var(--font-body, 'Sorts Mill Goudy', serif); font-style: italic; font-size: clamp(1.0625rem, 0.95rem + 0.3vw, 1.5rem); line-height: 1.6; color: var(--text-soft, #c9b79c); animation: ds-rise 1.4s cubic-bezier(0.16, 1, 0.3, 1) 0.8s both; } .ds-btn { position: relative; display: inline-flex; align-items: center; justify-content: center; gap: 1.05em; min-height: 4.15em; padding: 1.17em 2.34em 1.05em; border: 1px solid transparent; border-radius: 2px; font-family: var(--font-display, Cinzel, serif); font-size: clamp(0.8125rem, 0.7rem + 0.25vw, 1.125rem); letter-spacing: 0.2em; line-height: 1.2; text-transform: uppercase; text-decoration: none; transition: background-color 0.3s, border-color 0.3s, color 0.3s, box-shadow 0.5s cubic-bezier(0.16, 1, 0.3, 1), transform 0.5s cubic-bezier(0.16, 1, 0.3, 1); } .ds-arrow { width: 1.85em; height: 0.92em; flex: none; fill: none; stroke: currentColor; stroke-width: 1.1; stroke-linecap: round; stroke-linejoin: round; transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1); } .ds-btn:hover .ds-arrow { transform: translateX(4px); } .ds-btn:active { transform: translateY(1px); } .ds-btn:focus-visible { outline: 2px solid var(--gold-300, #e3c47a); outline-offset: 4px; } .ds-btn-primary { background: var(--gold-100, #f6e3aa); color: var(--ink, #2a1012); box-shadow: inset 0 1px 0 rgb(255 255 255 / 0.4), 0 16px 28px -18px rgb(252 182 160 / 0.45); } .ds-btn-primary::after { content: \"\"; position: absolute; inset: 4px; border: 1px solid rgb(42 16 18 / 0.22); border-radius: 1px; pointer-events: none; } .ds-btn-primary:hover { background: var(--gold-50, #fef3ca); transform: translateY(-2px); box-shadow: inset 0 1px 0 rgb(255 255 255 / 0.5), 0 20px 34px -18px rgb(252 182 160 / 0.6); } .ds-btn-quiet { background: rgb(18 17 24 / 0.8); border-color: var(--rule-strong, rgb(211 175 55 / 0.55)); color: var(--gold-50, #fef3ca); } .ds-btn-quiet:hover { background: rgb(211 175 55 / 0.12); border-color: var(--gold-300, #e3c47a); } @keyframes ds-unveil { from { filter: brightness(0.4) saturate(0.7); transform: scale(1.03); } } @keyframes ds-rise { from { opacity: 0.3; transform: translateY(10px); } } @media (prefers-reduced-motion: reduce) { .ds-hero-art, .ds-hero-actions, .ds-hero-note { animation: none; } }"
+      "description": "The whole page: one full screen, the masked key visual as the h1, and the two actions overlapping its lower fade. Unveil and rise on load.",
+      "html": "<section class=\"ds-hero\"><div class=\"ds-hero-art\"></div><div class=\"ds-hero-actions\"><a class=\"ds-btn ds-btn-primary\" href=\"#\">Explore the range <svg class=\"ds-arrow\" viewBox=\"0 0 24 12\" aria-hidden=\"true\"><path d=\"M0 6h22M17 1l5 5-5 5\"/></svg></a><a class=\"ds-btn ds-btn-quiet\" href=\"#\">Read the Legend</a></div></section>",
+      "css": ".ds-hero { display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 24rem; padding: 2rem 0; text-align: center; background: radial-gradient(55% 45% at 50% 62%, rgb(252 182 160 / 0.1), transparent 72%), var(--night-900, #1b1a23); overflow: hidden; } .ds-hero-art { width: 100%; aspect-ratio: 3 / 1; background: radial-gradient(40% 60% at 50% 40%, #e3c47a, transparent), linear-gradient(#2a2833, #2a1012); -webkit-mask-image: linear-gradient(90deg, transparent, #000 7%, #000 93%, transparent), linear-gradient(transparent, #000 6%, #000 66%, transparent 99%); -webkit-mask-composite: source-in; mask-image: linear-gradient(90deg, transparent, #000 7%, #000 93%, transparent), linear-gradient(transparent, #000 6%, #000 66%, transparent 99%); mask-composite: intersect; animation: ds-unveil 2.4s cubic-bezier(0.16, 1, 0.3, 1) both; } .ds-hero-actions { position: relative; display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; margin-top: -1.5rem; padding-inline: 1rem; animation: ds-rise 1.4s cubic-bezier(0.16, 1, 0.3, 1) 0.8s both; } .ds-btn { position: relative; display: inline-flex; align-items: center; justify-content: center; gap: 1.05em; min-height: 4.15em; padding: 1.17em 2.34em 1.05em; border: 1px solid transparent; border-radius: 2px; font-family: var(--font-display, Cinzel, serif); font-size: clamp(0.8125rem, 0.7rem + 0.25vw, 1.125rem); letter-spacing: 0.2em; line-height: 1.2; text-transform: uppercase; text-decoration: none; transition: background-color 0.3s, border-color 0.3s, color 0.3s, box-shadow 0.5s cubic-bezier(0.16, 1, 0.3, 1), transform 0.5s cubic-bezier(0.16, 1, 0.3, 1); } .ds-arrow { width: 1.85em; height: 0.92em; flex: none; fill: none; stroke: currentColor; stroke-width: 1.1; stroke-linecap: round; stroke-linejoin: round; transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1); } .ds-btn:hover .ds-arrow { transform: translateX(4px); } .ds-btn:active { transform: translateY(1px); } .ds-btn:focus-visible { outline: 2px solid var(--gold-300, #e3c47a); outline-offset: 4px; } .ds-btn-primary { background: var(--gold-100, #f6e3aa); color: var(--ink, #2a1012); box-shadow: inset 0 1px 0 rgb(255 255 255 / 0.4), 0 16px 28px -18px rgb(252 182 160 / 0.45); } .ds-btn-primary::after { content: \"\"; position: absolute; inset: 4px; border: 1px solid rgb(42 16 18 / 0.22); border-radius: 1px; pointer-events: none; } .ds-btn-primary:hover { background: var(--gold-50, #fef3ca); transform: translateY(-2px); box-shadow: inset 0 1px 0 rgb(255 255 255 / 0.5), 0 20px 34px -18px rgb(252 182 160 / 0.6); } .ds-btn-quiet { background: rgb(18 17 24 / 0.8); border-color: var(--rule-strong, rgb(211 175 55 / 0.55)); color: var(--gold-50, #fef3ca); } .ds-btn-quiet:hover { background: rgb(211 175 55 / 0.12); border-color: var(--gold-300, #e3c47a); } @keyframes ds-unveil { from { filter: brightness(0.4) saturate(0.7); transform: scale(1.03); } } @keyframes ds-rise { from { opacity: 0.3; transform: translateY(10px); } } @media (prefers-reduced-motion: reduce) { .ds-hero-art, .ds-hero-actions, }"
     }
   ],
   "narrative": {
     "northStar": "The Night of the Legend",
-    "overview": "The page is the palace night of the supplied key visual, and nothing more: one screen of dark slate sky with the key visual centred in it, its edges dissolving into the night. Lettering is cream-gold Trajan capitals, the same voice as the title on the banner; the visitor is spoken to in Goudy italic, the storytelling voice. Colour beyond night and gold arrives only as light: the low lantern-blush glow behind the actions, the warm underglow beneath the primary button, the coral of a text selection.\n\nThe world is brief-pinned to the client's key visual (\"use the same fonts same colors\"), so the banner is the source of truth for hue, type and atmosphere. Density is minimal and ceremonial: one plate, two actions, one line. Ornament is restricted to the world's own materials: fine gold hairlines and a single stroked arrow.",
+    "overview": "The page is the palace night of the supplied key visual, and nothing more: one screen of dark slate sky with the key visual centred in it, its edges dissolving into the night. Lettering is cream-gold Trajan capitals, the same voice as the title on the banner; the key visual carries every other word. Colour beyond night and gold arrives only as light: the low lantern-blush glow behind the actions, the warm underglow beneath the primary button, the coral of a text selection.\n\nThe world is brief-pinned to the client's key visual (\"use the same fonts same colors\"), so the banner is the source of truth for hue, type and atmosphere. Density is minimal and ceremonial: one plate, two actions. Ornament is restricted to the world's own materials: fine gold hairlines and a single stroked arrow.",
     "keyCharacteristics": [
       "One night-slate ground filling exactly one screen; no light grounds, no further sections.",
-      "Cream-gold Trajan capitals for every label; Goudy italic for the one line that speaks to the visitor.",
+      "Cream-gold Trajan capitals for every label; no running text on the page.",
       "Lotus coral and blush appear only as light, never as fills of any size.",
       "Gold hairlines draw the quiet button's border and the primary button's printed inner rule.",
       "Motion is lamplight: the palace brightens, then the actions rise; nothing slides in from the side."
@@ -282,11 +263,6 @@
         "section": "typography"
       },
       {
-        "name": "The Italic Narrator Rule",
-        "body": "Goudy italic is the voice that speaks to the visitor. It is the only Goudy face shipped; roman reading text would need the roman face restored first.",
-        "section": "typography"
-      },
-      {
         "name": "The No Bold Rule",
         "body": "Trajan stays at weight 400 with tracking for emphasis; font-synthesis-weight is off.",
         "section": "typography"
@@ -305,11 +281,10 @@
     "dos": [
       "Do take every hue from the key visual; it is the authority for colour and type in this world.",
       "Do set labels in the Trajan stack at weight 400 with 0.2em tracking, uppercase.",
-      "Do use Goudy italic in text-soft for the line that speaks to the visitor.",
       "Do draw borders and rules as 1px gold hairlines.",
       "Do keep lotus and blush as light: glows, underglow, selection.",
       "Do keep one primary (cream-gold) action, paired with at most one quiet button.",
-      "Do size the plate to the screen so the actions and note stay on the first screen.",
+      "Do size the plate to the screen so the actions stay on the first screen.",
       "Do gate entrance motion behind prefers-reduced-motion."
     ],
     "donts": [

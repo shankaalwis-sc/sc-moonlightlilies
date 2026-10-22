@@ -53,7 +53,7 @@ Prices change on the store, so the landing page does not show them. The store ow
 - Brand type: Trajan for headers, menus and labels; Goudy (Goudos) for body. Free stand-ins: Cinzel and Sorts Mill Goudy.
 - The landing page uses the key visual's fonts and colours (user instruction).
 - Key visual: night palace, lotus lanterns on water, burgundy theatre curtains, a seated queen, the gift range in lotus-print packaging.
-- User direction (22 October 2026): the page is a single full-screen hero: the key visual, Explore the range, Read the Legend and one line of copy. No header, no footer, no sections below it, no product listings. Phones load a dedicated 1080 x 540 mobile key visual.
+- User direction (22 October 2026): the page is a single full-screen hero: the key visual with Explore the range and Read the Legend. The user later removed the line of copy under the buttons, so the page has no running text. No header, no footer, no sections below it, no product listings. Phones load a dedicated 1080 x 540 mobile key visual.
 
 ## Evidence on Hand
 

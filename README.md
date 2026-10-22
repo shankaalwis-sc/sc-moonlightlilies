@@ -12,7 +12,7 @@ site/                    ← the deployable website (upload only this folder)
   index.html
   favicon.ico            ← the same icon as moonlight.spaceylon.com
   assets/css/styles.css
-  assets/fonts/          ← self-hosted Cinzel + Sorts Mill Goudy italic (stand-ins for Trajan and Goudy)
+  assets/fonts/          ← self-hosted Cinzel (stand-in for Trajan)
   assets/img/            ← key visual (desktop and mobile versions), social share image
 PRODUCT.md, DESIGN.md    ← product and design notes (not deployed)
 .impeccable/             ← design-process notes (not deployed)
@@ -38,7 +38,7 @@ Before launch, once the domain is known, make the social tags absolute in `index
 
 ## Fonts
 
-The brand faces come first in every font stack: Trajan for the button labels, Goudy italic for the note. Visitors with them installed see the real thing. Everyone else gets the self-hosted look-alikes, Cinzel and Sorts Mill Goudy (both SIL Open Font License). If you hold a web licence for Trajan or Goudos, add their `.woff2` files and `@font-face` rules to `styles.css`.
+The only live text is the two button labels, set in Trajan. Visitors with Trajan installed see the real thing; everyone else gets the self-hosted look-alike, Cinzel (SIL Open Font License). The words on the banner are part of the image. Goudy stays in the body font stack, but no Goudy text ships, so no Goudy font is downloaded. If you hold a web licence for Trajan, add its `.woff2` file and an `@font-face` rule to `styles.css`.
 
 ## Images
 
