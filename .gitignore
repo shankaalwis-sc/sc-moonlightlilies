@@ -1,0 +1,8 @@
+# Review screenshots and build scratch are regenerated, not versioned
+.impeccable/review/
+.impeccable/build/
+.impeccable/mocks/
+.impeccable/config.local.json
+
+.DS_Store
+Thumbs.db
