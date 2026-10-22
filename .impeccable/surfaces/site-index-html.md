@@ -12,33 +12,33 @@ related_targets: []
 ## Surface strategy
 
 - Audience: Spa Ceylon gift shoppers in Sri Lanka, often on phones, arriving from campaign channels.
-- Action: Explore the range (lk.spaceylon.com/pages/festive-2026) is primary; Read the Legend (moonlight.spaceylon.com) is secondary. The page closes on The Collection with a single View the collection button to the range.
-- Proof and content: the key visual (which shows the range), the Legend's own story beats and its cover. No prices, no invented claims.
-- User direction (22 October 2026): no header, no footer, no product listings. Everything from the Beauty & Fragrance feature down was cut, including the closing quote, and replaced by the View the collection button.
+- Action: Explore the range (lk.spaceylon.com/pages/festive-2026) is primary; Read the Legend (moonlight.spaceylon.com) is secondary. Both sit on the key visual; there is nothing else to click.
+- Proof and content: the key visual itself, which shows the range, the queen and the palace night, plus one line of copy. No prices, no invented claims.
+- User direction (22 October 2026): the page is a single full-screen hero. Removed in turn: the header and footer, the product listings, the closing quote, then the Legend retelling and The Collection band. Phones load the user's dedicated 1080x540 mobile key visual.
 - Constraints: the key visual's fonts and colours (user-pinned). The banner carries baked-in words, so the hero exposes them as text.
 
 ## Direction contract
 
-THESIS: The page is the night of the legend. The key visual's palace night is the ground, and the lake of lamps is the reading path. It refuses the category default of a light product grid under a hero banner.
+THESIS: The page is the night of the legend: the key visual's palace night becomes the whole screen, and the collection is presented on that stage. It refuses the category default of a banner strip above a product grid.
 
-OWN-WORLD: Night-slate sky (#1b1a23 deepening to #121118) and one closing oxblood band (#2a1012 with an #632825 glow) like the curtains. Cream-gold Trajan capitals (#fef3ca) and a Goudy italic narrative voice. Lotus coral (#f97983) and lantern blush (#fcb6a0) appear only as light, never as large fields. Gold hairlines rule the sections, the key visual is feathered into the night with no frame, and gold lily line art is the only ornament. As shipped; DESIGN.md is the system of record.
+OWN-WORLD: A night-slate sky (#1b1a23) with a low lantern-blush glow behind the actions. Cream-gold Trajan capitals (#fef3ca) on the buttons, and a Goudy italic narrative voice. Lotus coral and lantern blush appear only as light (the glow, the button underglow, text selection), never as fields. The key visual is feathered into the night with no frame, and nothing else ornaments the page. As shipped; DESIGN.md is the system of record.
 
-STORY: The visitor sees the collection presented on a stage in the key visual and reads the legend in five short beats (beauty shared, not taken). They come to believe the gifts carry that meaning, then click Explore the range or View the collection, or read the Legend first.
+STORY: The visitor sees the collection presented on a stage, the queen enthroned beside the gifts under the palace night. They understand this is Spa Ceylon's festive collection, then click Explore the range, or Read the Legend to hear the story behind it.
 
-FIRST VIEWPORT: No top bar (user direction). The hero fills exactly one screen at every size (user direction, 22 October 2026). The 3:1 key visual sits centred in the night, sized to the screen so the actions always fit: it narrows on short laptop screens, overscans the width by up to 12% on tall ones, and never upscales past 2400px. Portrait screens crop it to a 1.3:1 window on the lettering. Overlapping its lower fade sit the primary Explore the range button (cream-gold fill, oxblood text) and Read the Legend (gold outline), which scale with the screen. Below the note, a quiet "The Legend" scroll cue leads down. Everything is visible from 1366x625 to 2560x1440 and on 360 to 390px phones.
+FIRST VIEWPORT: The whole page is one screen at every size (user direction). There is no top bar. The key visual sits centred in the night, sized to the screen so the actions always fit. On landscape screens the 3:1 desktop plate narrows on short laptops, overscans the width by up to 12% on tall screens, and never upscales past 2400px. Portrait screens load the 2:1 mobile plate at 1.6:1, so the title, the gifts and the queen's face stay in frame. The primary Explore the range button (cream-gold fill, oxblood text) and Read the Legend (gold outline) overlap the plate's lower fade and scale with the screen, and one Goudy italic line follows.
 
-FORM: brief-pinned world (the supplied key visual's palace night), position 1 of 1. Signature interaction: lamps kindle one by one down the Legend path as each chapter enters view. seed: none. The roll was available but deliberately skipped, because the user's brief pinned the world: "use the same fonts same colors" as the supplied key visual.
+FORM: brief-pinned world (the supplied key visual's palace night), position 1 of 1. Signature moment: the unveil, as the palace's lamps come up when the page opens (brightness and saturation rise while the plate settles). The Legend's lamp-kindling path was retired with the Legend section. seed: none. The roll was available but deliberately skipped, because the user's brief pinned the world: "use the same fonts same colors" as the supplied key visual.
 
 FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, DESIGN.md, and every shipping raster carrying its provenance
 
 ## Memorable moment
 
-Lamps lighting one by one down the lake of the Legend, ending at the open book.
+The palace lamps coming up on the key visual as the page opens, with the two cream-gold and gold-outline actions rising onto its lower fade.
 
 ## Unresolved
 
 - Hosting target and domain are not decided.
 - Analytics tag (the Legend site uses Matomo at analytics.mkthq.xyz) is not added; the owner decides.
-- Phones crop the key visual to its lettering, so the queen shows only as an arm, the throne and the edge of her gown. A portrait or square master of the key visual would let a `<picture>` source restore her at 600px and below.
+- Resolved: phones now load the user's mobile key visual, so the queen, her face and the gifts stay in frame on portrait screens. Its 1080px width is slightly soft on high-density tablets held upright.
 - With no header or footer, the Spa Ceylon logo appears nowhere on the page. The brand name appears only in the hero note and the meta tags.
 - og:image and og:url must become absolute URLs once the domain is chosen.

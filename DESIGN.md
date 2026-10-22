@@ -1,60 +1,26 @@
 ---
 name: Moonlight Lilies
-description: Spa Ceylon Festive 2026. The key visual's palace night, lit by lotus lamps and lettered in cream-gold Trajan.
+description: Spa Ceylon Festive 2026. The key visual's palace night on one screen, lit by lantern blush and lettered in cream-gold Trajan.
 colors:
   night-950: "#121118"
   night-900: "#1b1a23"
-  oxblood-900: "#2a1012"
-  oxblood-600: "#632825"
-  lotus-600: "#e0646b"
   lotus-500: "#f97983"
   lotus-300: "#fcb6a0"
   gold-50: "#fef3ca"
   gold-100: "#f6e3aa"
   gold-300: "#e3c47a"
-  gold-500: "#d3af37"
-  gold-700: "#9e7128"
   ink: "#2a1012"
   text: "#ecdfc9"
   text-soft: "#c9b79c"
-  rule: "rgb(211 175 55 / 0.26)"
   rule-strong: "rgb(211 175 55 / 0.55)"
 typography:
-  display:
-    fontFamily: "\"Trajan Pro 3\", \"Trajan Pro\", Trajan, Cinzel, \"Times New Roman\", serif"
-    fontSize: "clamp(2.25rem, 5vw, 3.75rem)"
-    fontWeight: 400
-    lineHeight: 1.15
-    letterSpacing: "0.06em"
-  headline:
-    fontFamily: "\"Trajan Pro 3\", \"Trajan Pro\", Trajan, Cinzel, \"Times New Roman\", serif"
-    fontSize: "clamp(2rem, 4.2vw, 3.4rem)"
-    fontWeight: 400
-    lineHeight: 1.1
-    letterSpacing: "0.05em"
-  title:
-    fontFamily: "\"Trajan Pro 3\", \"Trajan Pro\", Trajan, Cinzel, \"Times New Roman\", serif"
-    fontSize: "clamp(1.15rem, 1.6vw, 1.375rem)"
-    fontWeight: 400
-    lineHeight: 1.15
-    letterSpacing: "0.1em"
-  dek:
-    fontFamily: "Goudos, \"Goudy Old Style\", \"Sorts Mill Goudy\", Georgia, serif"
-    fontSize: "clamp(1.25rem, 1.9vw, 1.5rem)"
-    fontWeight: 400
-    lineHeight: 1.45
-  body:
-    fontFamily: "Goudos, \"Goudy Old Style\", \"Sorts Mill Goudy\", Georgia, serif"
-    fontSize: "1.1875rem"
-    fontWeight: 400
-    lineHeight: 1.6
   note:
     fontFamily: "Goudos, \"Goudy Old Style\", \"Sorts Mill Goudy\", Georgia, serif"
-    fontSize: "1.125rem"
+    fontSize: "clamp(1.0625rem, 0.95rem + 0.3vw, 1.5rem)"
     fontWeight: 400
     lineHeight: 1.6
   label:
-    fontFamily: "\"Trajan Pro 3\", \"Trajan Pro\", Trajan, Cinzel, \"Times New Roman\", serif"
+    fontFamily: "\"Trajan Pro 3\", \"Trajan Pro\", Trajan, \"Cinzel\", \"Times New Roman\", serif"
     fontSize: "clamp(0.8125rem, 0.7rem + 0.25vw, 1.125rem)"
     fontWeight: 400
     lineHeight: 1.2
@@ -64,9 +30,6 @@ rounded:
   button: "2px"
 spacing:
   gutter: "clamp(1rem, 4vw, 3rem)"
-  measure: "72rem"
-  section-y: "clamp(5rem, 11vw, 9rem)"
-  beat: "clamp(2.5rem, 5vw, 3.5rem)"
 components:
   button-primary:
     backgroundColor: "{colors.gold-100}"
@@ -78,12 +41,6 @@ components:
   button-primary-hover:
     backgroundColor: "{colors.gold-50}"
     textColor: "{colors.ink}"
-  button-primary-large:
-    backgroundColor: "{colors.gold-100}"
-    textColor: "{colors.ink}"
-    rounded: "{rounded.button}"
-    padding: "1.17em 2.97em 1.05em"
-    height: "4.43em"
   button-quiet:
     backgroundColor: "rgb(18 17 24 / 0.8)"
     textColor: "{colors.gold-50}"
@@ -94,15 +51,6 @@ components:
   button-quiet-hover:
     backgroundColor: "rgb(211 175 55 / 0.12)"
     textColor: "{colors.gold-50}"
-  textlink:
-    textColor: "{colors.gold-100}"
-    typography: "{typography.body}"
-  textlink-hover:
-    textColor: "{colors.gold-50}"
-  lamp-marker:
-    size: "3.5rem"
-  book-cover:
-    width: "minmax(15rem, 24rem)"
 ---
 
 # Design System: Moonlight Lilies
@@ -111,136 +59,122 @@ components:
 
 **Creative North Star: "The Night of the Legend"**
 
-The page is the palace night of the supplied key visual, extended downward: a dark slate sky that deepens toward the lake, then gives way to the oxblood of the theatre curtains. Lettering is cream-gold Trajan capitals, the same voice as the title on the banner; the narrative speaks in Goudy, and the italic is its storytelling voice. Colour beyond night, oxblood and gold arrives only as light: the coral and blush of lotus lamps, their pools on the water, the warm underglow beneath a button.
+The page is the palace night of the supplied key visual, and nothing more: one screen of dark slate sky with the key visual centred in it, its edges dissolving into the night. Lettering is cream-gold Trajan capitals, the same voice as the title on the banner; the visitor is spoken to in Goudy italic, the storytelling voice. Colour beyond night and gold arrives only as light: the low lantern-blush glow behind the actions, the warm underglow beneath the primary button, the coral of a text selection.
 
-The world is brief-pinned to the client's key visual ("use the same fonts same colors"), so the banner is the source of truth for hue, type and atmosphere. Density is low and ceremonial: wide section padding, a single centred column at the open and close, a two-column book-and-path spread in the middle. Ornament is restricted to the world's own materials: gold hairlines, the lotus lamp, the gold lily line art.
+The world is brief-pinned to the client's key visual ("use the same fonts same colors"), so the banner is the source of truth for hue, type and atmosphere. Density is minimal and ceremonial: one plate, two actions, one line. Ornament is restricted to the world's own materials: fine gold hairlines and a single stroked arrow.
 
 **Key Characteristics:**
-- Night-slate and oxblood grounds; no light sections.
-- Cream-gold Trajan capitals for every heading and label; Goudy for reading, italic for the narrator.
+- One night-slate ground filling exactly one screen; no light grounds, no further sections.
+- Cream-gold Trajan capitals for every label; Goudy italic for the one line that speaks to the visitor.
 - Lotus coral and blush appear only as light, never as fills of any size.
-- Gold hairlines (26% and 55% gold) draw every rule, border and path.
-- Motion is lamplight: things brighten, kindle and flicker; nothing slides in from the side.
+- Gold hairlines draw the quiet button's border and the primary button's printed inner rule.
+- Motion is lamplight: the palace brightens, then the actions rise; nothing slides in from the side.
 
 ## Colors
 
-A night palette lit from within: two dark grounds, a five-step gold for lettering and rules, and three lotus tones held back for light.
+A night palette lit from within: two night tones, a three-step gold for lettering and focus, and two lotus tones held back for light.
 
 ### Primary
-- **Title Cream-Gold** (gold-50): the colour of every heading and of the lamp flame; the hover state of the primary button. Matches the banner's title lettering.
-- **Lantern Parchment** (gold-100): the primary button fill and the textlink colour; one step warmer than the headings so the button reads as a printed object.
+- **Title Cream-Gold** (gold-50): the quiet button's label and the primary button's hover fill. Matches the banner's title lettering.
+- **Lantern Parchment** (gold-100): the primary button fill; one step warmer than the lettering so the button reads as a printed object.
 
 ### Secondary
-- **Old Gold** (gold-500): the source of every hairline. Rules are this hue at 26% (rule) or 55% (rule-strong); the lamp's water lines use it at 55% opacity.
-- **Burnished Gold** (gold-300): focus outlines, unlit-lamp headings, the lamp petal stroke, and the quiet button's hover border.
-- **Antique Brass** (gold-700): the scrollbar thumb only.
+- **Burnished Gold** (gold-300): the focus outline and the quiet button's hover border.
+- **Strong Gold Hairline** (rule-strong): old gold at 55%, the quiet button's resting border. The same old-gold hue tints the quiet button's hover ground at 12%.
 
 ### Tertiary (light only)
-- **Lotus Coral** (lotus-500): the lit lamp's front petal and the text selection.
-- **Deep Lotus** (lotus-600): the lamp's side petals, so the flower has form.
-- **Lantern Blush** (lotus-300): the lamp's radial pool, the hero's low radial glow (10%), and the primary button's underglow (45%, 60% on hover).
+- **Lotus Coral** (lotus-500): the text selection only.
+- **Lantern Blush** (lotus-300): the hero's low radial glow (10%) and the primary button's underglow (45%, 60% on hover).
 
 ### Neutral
 - **Palace Night** (night-900): the page ground and the hero; the theme colour.
-- **Lake Night** (night-950): where the Legend section deepens (gradient over 30rem); the quiet button's ground at 80%.
-- **Curtain Oxblood** (oxblood-900): the closing Collection ground. Also serves as ink, the text on cream-gold.
-- **Velvet Oxblood** (oxblood-600): the raised light at the top of the Collection band (radial, 55%).
-- **Moon Parchment** (text): body copy.
-- **Faded Parchment** (text-soft): italic deks, notes and captions.
+- **Lake Night** (night-950): the quiet button's ground at 80% and the text colour on a selection.
+- **Curtain Ink** (ink): the oxblood of the theatre curtains, kept as the text on cream-gold; its 22% tint draws the primary button's inner rule.
+- **Moon Parchment** (text): the base text colour.
+- **Faded Parchment** (text-soft): the italic note.
 
 ### Named Rules
-**The Lamplight Rule.** Lotus coral, deep lotus and blush are light sources. They fill a petal, a glow, a pool or a shadow; they never fill a section, a card or a button.
+**The Lamplight Rule.** Lotus coral and blush are light sources. They fill a glow, a shadow or a selection; they never fill a section, a card or a button.
 
-**The Two Grounds Rule.** Surfaces are night (900 or 950) or oxblood (900 with a 600 glow). A third ground needs a reason in the key visual.
+**The One Ground Rule.** The only surface is Palace Night, warmed by a low blush glow. Lake Night appears only under the quiet button. A second ground needs a reason in the key visual.
 
 ## Typography
 
 **Display Font:** Trajan Pro 3 / Trajan Pro / Trajan (licensed, used when installed), with self-hosted Cinzel as the stand-in
-**Body Font:** Goudos / Goudy Old Style (licensed, used when installed), with self-hosted Sorts Mill Goudy (roman and italic) as the stand-in
+**Body Font:** Goudos / Goudy Old Style (licensed, used when installed), with self-hosted Sorts Mill Goudy italic as the stand-in
 
-**Character:** Roman inscriptional capitals over an old-style book face. Trajan carries the brand's authority at weight 400 with open tracking; Goudy's italic is the storyteller, used for every dek, note, caption and the textlink.
+**Character:** Roman inscriptional capitals over an old-style book face. Trajan carries the brand's authority at weight 400 with open tracking; Goudy's italic is the storyteller. The page title is the key visual itself: the h1 wraps the picture, and its alt text carries the baked-in words.
 
 ### Hierarchy
-- **Display** (400, clamp(2.25rem, 5vw, 3.75rem), 1.15, 0.06em): the closing section title.
-- **Headline** (400, clamp(2rem, 4.2vw, 3.4rem), 1.1, 0.05em): the Legend title.
-- **Title** (400, clamp(1.15rem, 1.6vw, 1.375rem), 0.1em): chapter titles beside each lamp.
-- **Dek** (italic, clamp(1.25rem, 1.9vw, 1.5rem), 1.45, 36 to 38ch): the line under a section title, in text-soft.
-- **Body** (400, 1.1875rem, 1.6; 1.125rem at 760px and below; 60ch): chapter text.
-- **Note / Caption** (italic, text-soft, 48ch): the hero note, fluid at clamp(1.0625rem, 0.95rem + 0.3vw, 1.5rem), and the book caption at 1.0625rem.
-- **Label** (400, clamp(0.8125rem, 0.7rem + 0.25vw, 1.125rem), 0.2em, uppercase): button text; clamp(0.875rem, 0.75rem + 0.3vw, 1.1875rem) on the large button, 0.8125rem with 0.16em tracking on phones. The hero's scroll cue uses the same voice at clamp(0.6875rem, 0.55rem + 0.2vw, 0.875rem), 0.26em.
+- **Label** (400, clamp(0.8125rem, 0.7rem + 0.25vw, 1.125rem), 1.2, 0.2em, uppercase): button text. The label size drives the whole button, which is sized in em.
+- **Note** (italic, clamp(1.0625rem, 0.95rem + 0.3vw, 1.5rem), 1.6, 48ch, text-soft): the single line under the actions.
 
 ### Named Rules
 **The Licensed First Rule.** Every stack names the brand's licensed face first and its free stand-in second. Never ship a stack that skips to a system serif for display.
 
-**The Italic Narrator Rule.** Goudy italic is the voice that speaks to the visitor (deks, notes, captions, the textlink). Roman Goudy is the story itself.
+**The Italic Narrator Rule.** Goudy italic is the voice that speaks to the visitor. It is the only Goudy face shipped; roman reading text would need the roman face restored first.
 
-**The No Bold Rule.** Headings stay at weight 400 with tracking for emphasis; font-synthesis-weight is off.
+**The No Bold Rule.** Trajan stays at weight 400 with tracking for emphasis; font-synthesis-weight is off.
 
 ## Layout
 
-Centred, ceremonial and wide. Gutters are fluid (gutter token), content width caps at the measure token (72rem). The hero fills exactly one screen (100svh, falling back to 100vh) and centres its contents in it: the 3:1 key visual, sized to the screen, with its edges feathered into the night and the actions overlapping its lower fade by 5% of its width (clamped between 1.25rem and 5rem). The Legend is a two-column spread (book column minmax(15rem, 24rem), story column fills), with the book sticky at 3rem; at 960px it collapses to one column with the book centred at min(17rem, 64vw). The close is a single centred column.
+One centred column on one screen. The hero fills exactly the viewport (min-height of the vh token: 100svh, falling back to 100vh), stacks the plate, actions and note as a centred column, and pads clamp(1rem, 4vh, 3rem) top and bottom. Gutters are fluid (gutter token) and apply to the actions and the note.
 
-Vertical rhythm is generous: sections pad clamp(4rem, 8vw, 7rem) to clamp(6rem, 12vw, 10rem); chapters are separated by the beat token. On portrait screens the hero crops to a 1.3:1 window on the lettering (object-position 55% 50%). At 760px and below, buttons stack full-width up to 24rem. On landscape screens 520px tall or less, the scroll cue is dropped so the first screen still fits.
+The plate is sized to the screen so the actions and note always fit. A reserve of clamp(9rem, 26% of the screen height, 14rem) is held back for them. On landscape screens the 3:1 plate is min(112%, 150rem, (screen height − reserve) × 3) wide: a short laptop narrows it, a tall screen lets it overscan the width by up to 12% (trimming only the feathered curtain edges), and it never upscales past the artwork's 2400px. Portrait screens load the 2:1 mobile key visual and show it at 1.6:1, object-position 62% 50%, at min(100%, (screen height − reserve) × 1.6), so the title, the gifts and the queen's face stay in frame.
+
+The actions overlap the plate's lower fade by 5% of its width, clamped between 1.25rem and 5rem, with a fluid gap of clamp(1rem, 0.6rem + 0.5vw, 1.5rem). At 760px and below they stack full-width up to 24rem and overlap by a fixed 1.5rem. The note sits clamp(1.25rem, 2.5vh, 2rem) below them.
+
+### Named Rules
+**The One Screen Rule.** The page is one full-screen hero at every size. Nothing sits above or below it.
 
 ## Elevation & Depth
 
-Depth comes from light, not lifted surfaces. Sections are flat grounds shaded by radial glows (blush in the hero, velvet oxblood at the top of the Collection) and a vertical night gradient in the Legend. Only two objects carry shadows: the primary button, which sits over warm lamplight on water, and the book cover, which is a physical object resting at an angle.
+Depth comes from light, not lifted surfaces. The hero is a flat night ground shaded by one low blush radial glow (55% by 45% at 50% 62%, 10%). Only the primary button carries a shadow, because it sits over warm lamplight on water.
 
 ### Shadow Vocabulary
 - **Lamplight underglow** (`box-shadow: inset 0 1px 0 rgb(255 255 255 / 0.4), 0 16px 28px -18px rgb(252 182 160 / 0.45)`): the primary button at rest; hover strengthens to 0.5 and `0 20px 34px -18px` at 0.6.
-- **Book rest** (`box-shadow: 0 2px 0 rgb(211 175 55 / 0.25), 0 36px 60px -24px rgb(0 0 0 / 0.85), 0 12px 24px -12px rgb(0 0 0 / 0.6)`): the cover, with a gold bottom edge and a deep dark fall.
 
 ### Named Rules
-**The Warm Shadow Rule.** A shadow under a lettered control is warm blush light, offset low and blurred; black shadows belong only to physical objects such as the book.
+**The Warm Shadow Rule.** A shadow under a lettered control is warm blush light, offset low and blurred. No black shadows ship.
 
 ## Shapes
 
-Nearly square. Buttons turn a 2px corner; the primary button's printed inner rule sits 4px inside at 1px radius. The key visual is clipped by gradient masks, never by a frame or radius: horizontally it feathers over 7% each side, vertically it dissolves from 66% to 99%. Lines are 1px gold hairlines throughout: the Collection's top border, the quiet button's border, and the vertical path of light between lamps (rule-strong fading to rule). The gold lily line art is the only standalone ornament.
+Nearly square. Buttons turn a 2px corner; the primary button's printed inner rule sits 4px inside at 1px radius. The key visual is clipped by gradient masks, never by a frame or radius. On landscape it feathers over 7% each side and dissolves vertically from 6% to 66%, fading out by 99%; on portrait the side feather tightens to 4% and the vertical holds from 5% to 72%. Lines are 1px gold hairlines. The stroked arrow (1.1 stroke, round caps and joins) is the only drawn mark.
 
 ## Components
 
 ### Buttons
 Printed and lamp-lit: a cream card with an engraved rule, sitting over warm light.
-- **Shape:** gently squared (2px), 1px border. Padding, height, gap and arrow are all in em (min height 4.15em, padding 1.17em 2.34em 1.05em), so the whole button grows with its fluid label on large displays.
-- **Primary:** gold-100 fill, ink text, label type, an inset 1px oxblood rule at 22% drawn 4px inside the edge, the lamplight underglow. An inline SVG arrow (1.85em by 0.92em, 1.1 stroke) follows the label.
-- **Hover / Focus:** primary brightens to gold-50 and lifts 2px with a stronger glow; the arrow travels 4px right; active presses down 1px. Focus is a 2px gold-300 outline at 4px offset. Transitions use ease-out cubic-bezier(0.16, 1, 0.3, 1), 0.3s for colour and 0.5s for lift.
-- **Quiet:** night-950 at 80% with a rule-strong border and gold-50 text; hover tints the ground with gold at 12% and the border to gold-300.
-- **Large:** 4.43em tall, 2.97em inline padding, the larger fluid label; used for the single closing action.
+- **Shape:** gently squared (2px), 1px border. Padding, height, gap and arrow are all in em (min height 4.15em, padding 1.17em 2.34em 1.05em, gap 1.05em), so the whole button grows with its fluid label on large displays.
+- **Primary:** gold-100 fill, ink text, label type, an inset 1px ink rule at 22% drawn 4px inside the edge, the lamplight underglow. An inline SVG arrow (1.85em by 0.92em, 1.1 stroke) follows the label.
+- **Hover / Focus:** primary brightens to gold-50 and lifts 2px with a stronger glow; the arrow travels 4px right (0.45s); active presses down 1px. Focus is a 2px gold-300 outline at 4px offset. Transitions use ease-out cubic-bezier(0.16, 1, 0.3, 1), 0.3s for colour and 0.5s for lift and glow.
+- **Quiet:** night-950 at 80% with a rule-strong border and gold-50 text; hover tints the ground with old gold at 12% and moves the border to gold-300.
 
-### Textlink
-An italic Goudy link in gold-100, underlined at 1px with gold at 45%, offset 0.28em, followed by the arrow. Hover moves to gold-50, the underline to gold-300, the arrow 3px right. Used as the lesser alternative beside a quiet button.
-
-### Lotus-Lamp Marker (signature)
-A 3.5rem inline SVG: a cream-gold flame, a lotus of one coral front petal and two deep-lotus side petals stroked in gold-300, two gold water lines, and a blush radial pool behind. Each lamp heads a chapter on the Legend's path, joined to the next by a 1px gold hairline.
-- **Unlit (JS on, before view):** petals transparent with a gold outline at 55%, no flame (scaled to 0.3, opacity 0), no pool, chapter title in gold-300.
-- **Lit:** petals fill (1.1s), pool fades up (1.6s), flame rises (1.2s after 0.3s), title brightens to gold-50 (1s), then the flame flickers on a 3.2s loop.
-- **Kindling:** an IntersectionObserver (bottom root margin -30%) lights each chapter as it enters view, and lights any chapter already scrolled past. Without JS or IntersectionObserver every lamp is lit.
-
-### Book Cover
-The Legend cover as an object: rotated -2.5deg, a gold 2px bottom edge, a deep black fall, and a spine shading gradient over its left 14% so it reads as a book, not a card. Hover straightens to -0.5deg and lifts 6px (0.8s). Captioned below in italic text-soft.
-
-### Feathered Key-Visual Hero
-The banner is the page's h1 (its alt text carries the baked-in words), at 3:1, masked to dissolve into the night on all sides. The hero is a full-screen stage. The banner's width is `min(112%, 150rem, (screen height − reserve) × 3)`, where the reserve is `clamp(12rem, 34% of the screen height, 17rem)` for the actions, note and cue. A short laptop screen therefore narrows the banner so everything stays on the first screen. A tall screen lets it overscan the width by up to 12%, trimming only the feathered curtain edges. It never upscales past the artwork's 2400px; wider screens centre it in the night. Below the note, a "The Legend" scroll cue (label voice, a 1px down arrow) sits in the hero's bottom padding and links to the Legend. On load the banner unveils: brightness rises from 0.4 and saturation from 0.7 while the scale settles from 1.03 (2.4s). The actions, note and cue rise 10px from 30% opacity after 0.8s (1.4s). Portrait screens crop to a 1.3:1 window centred on the lettering, with srcset sizes `(orientation: portrait) 231vw, 100vw`.
-
-### Motion and Reduced Motion
-All animations run only under prefers-reduced-motion: no-preference. Under reduce, transitions and animations collapse to 0.01ms with one iteration and smooth scrolling is off, so lamps appear lit without kindling or flicker.
+### Feathered Key-Visual Hero (signature)
+The whole page. The h1 wraps a picture: portrait screens get the 1080x540 mobile key visual, landscape screens a 1200w/2400w srcset of the 3:1 plate; each orientation preloads only its own image. The plate is masked to dissolve into the night on all sides and sized as described in Layout. Below it sit Explore the range (primary) and Read the Legend (quiet), then the italic note.
+- **Unveil:** on load the plate brightens from 0.4 and saturates from 0.7 while its scale settles from 1.03 (2.4s): the lamps come up on the palace.
+- **Rise:** the actions and the note rise 10px from 30% opacity after 0.8s (1.4s).
+- **Reduced motion:** both animations run only under prefers-reduced-motion: no-preference. Under reduce, transitions and animations collapse to 0.01ms with one iteration.
 
 ## Do's and Don'ts
 
 ### Do:
 - **Do** take every hue from the key visual; it is the authority for colour and type in this world.
-- **Do** set headings and labels in the Trajan stack at weight 400 with tracking (0.05em to 0.2em), and reading text in the Goudy stack.
-- **Do** use Goudy italic in text-soft for deks, notes and captions.
-- **Do** draw rules, borders and paths as 1px gold hairlines (rule or rule-strong).
-- **Do** keep lotus and blush as light: petals, pools, glows, underglow.
-- **Do** keep one primary (cream-gold) action per view, paired with at most a quiet button or a textlink.
-- **Do** gate entrance motion behind prefers-reduced-motion and make every lamp lit without JS.
+- **Do** set labels in the Trajan stack at weight 400 with 0.2em tracking, uppercase.
+- **Do** use Goudy italic in text-soft for the line that speaks to the visitor.
+- **Do** draw borders and rules as 1px gold hairlines.
+- **Do** keep lotus and blush as light: glows, underglow, selection.
+- **Do** keep one primary (cream-gold) action, paired with at most one quiet button.
+- **Do** size the plate to the screen so the actions and note stay on the first screen.
+- **Do** gate entrance motion behind prefers-reduced-motion.
 
 ### Don't:
+- **Don't** add sections below the hero; the page is one full-screen hero (user direction, 22 October 2026).
 - **Don't** add a header, footer or top bar (user direction, 22 October 2026).
-- **Don't** list products or prices on the page; the page ends at The Collection with one View the collection button (user direction).
+- **Don't** list products or prices on the page (user direction).
+- **Don't** serve phones the desktop plate in portrait; they load the dedicated mobile key visual (user direction).
 - **Don't** fill a section, card or button with lotus coral or blush.
-- **Don't** introduce a light ground or a product grid under the hero.
+- **Don't** introduce a light ground.
 - **Don't** bold Trajan or set the display stack without its licensed faces first.
 - **Don't** frame or round the key visual; it dissolves into the night through masks.
-- **Don't** add ornament outside the world's own set: gold hairlines, the lotus lamp and the gold lily line art.
+- **Don't** add ornament outside the world's own set: gold hairlines and the stroked arrow.

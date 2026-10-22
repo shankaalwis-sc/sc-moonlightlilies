@@ -53,12 +53,13 @@ Prices change on the store, so the landing page does not show them. The store ow
 - Brand type: Trajan for headers, menus and labels; Goudy (Goudos) for body. Free stand-ins: Cinzel and Sorts Mill Goudy.
 - The landing page uses the key visual's fonts and colours (user instruction).
 - Key visual: night palace, lotus lanterns on water, burgundy theatre curtains, a seated queen, the gift range in lotus-print packaging.
-- User direction (22 October 2026): no header and no footer. The page ends at The Collection with a single View the collection button, and does not list products.
+- User direction (22 October 2026): the page is a single full-screen hero: the key visual, Explore the range, Read the Legend and one line of copy. No header, no footer, no sections below it, no product listings. Phones load a dedicated 1080 x 540 mobile key visual.
 
 ## Evidence on Hand
 
 - Key visual banner, 2400 x 800 (supplied by the user as "WEB BANNER WITHOUT.png"): `site/assets/img/banner.webp`, with a 1200 x 400 variant `banner-1200.webp`
-- Legend book cover from moonlight.spaceylon.com: `site/assets/img/legend-cover.webp`
+- Mobile key visual, 1080 x 540 (supplied by the user for phones): `site/assets/img/banner-mobile.webp`
+- Legend book cover on moonlight.spaceylon.com (no longer on the page)
 - Product photography on the store's product pages (dark brass-and-lily lifestyle shots). Not used on the page: the user removed the product sections.
 - Gold lily flower and leaf line art from moonlight.spaceylon.com
 - Legend lines, verified against the flipbook: "This festive season, the legend comes alive once more" (page 31, paraphrased in the hero note), and the Queen's "What we honour, we preserve. What we preserve, we pass on." (speech bubble, page 29; no longer on the page)

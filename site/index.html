@@ -1,10 +1,12 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Moonlight Lilies · Spa Ceylon Festive Collection 2026</title>
-  <meta name="description" content="Presenting Moonlight Lilies, Spa Ceylon's festive gift collection for 2026: a curated collection of gifts for those who mean the most, inspired by The Legend of the Moonlight Lilies.">
+  <meta name="description"
+    content="Presenting Moonlight Lilies, Spa Ceylon's festive gift collection for 2026: a curated collection of gifts for those who mean the most, inspired by The Legend of the Moonlight Lilies.">
   <meta name="theme-color" content="#1b1a23">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Moonlight Lilies · Spa Ceylon">
@@ -12,146 +14,43 @@
   <meta property="og:image" content="assets/img/share.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="Presenting Moonlight Lilies: a curated collection of gifts for those who mean the most.">
+  <meta property="og:image:alt"
+    content="Presenting Moonlight Lilies: a curated collection of gifts for those who mean the most.">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" href="favicon.ico" sizes="16x16 32x32 48x48">
-  <link rel="preload" as="image" fetchpriority="high"
-        imagesrcset="assets/img/banner-1200.webp 1200w, assets/img/banner.webp 2400w"
-        imagesizes="(orientation: portrait) 231vw, 100vw">
+  <!-- Each screen shape preloads only its own key visual. -->
+  <link rel="preload" as="image" fetchpriority="high" media="(orientation: portrait)"
+    href="assets/img/banner-mobile.webp">
+  <link rel="preload" as="image" fetchpriority="high" media="(orientation: landscape)"
+    imagesrcset="assets/img/banner-1200.webp 1200w, assets/img/banner.webp 2400w" imagesizes="112vw">
   <link rel="preload" href="assets/fonts/cinzel-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/sorts-mill-goudy-italic-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="assets/css/styles.css">
-  <script>document.documentElement.classList.add("js")</script>
-  <script src="assets/js/main.js" defer></script>
 </head>
+
 <body>
   <main>
     <section class="hero" aria-labelledby="hero-title">
       <h1 id="hero-title" class="hero__title">
-        <img class="hero__art" src="assets/img/banner.webp" width="2400" height="800" fetchpriority="high"
-             srcset="assets/img/banner-1200.webp 1200w, assets/img/banner.webp 2400w"
-             sizes="(orientation: portrait) 231vw, 100vw"
-             alt="Presenting Moonlight Lilies. A curated collection of gifts for those who mean the most.">
+        <picture>
+          <source media="(orientation: portrait)" srcset="assets/img/banner-mobile.webp" width="1080" height="540">
+          <img class="hero__art" src="assets/img/banner.webp" width="2400" height="800" fetchpriority="high"
+            srcset="assets/img/banner-1200.webp 1200w, assets/img/banner.webp 2400w" sizes="112vw"
+            alt="Presenting Moonlight Lilies. A curated collection of gifts for those who mean the most.">
+        </picture>
       </h1>
       <div class="hero__actions">
         <a class="btn btn--primary" href="https://lk.spaceylon.com/pages/festive-2026">
           Explore the range
-          <svg class="arrow" viewBox="0 0 24 12" aria-hidden="true"><path d="M0 6h22M17 1l5 5-5 5"/></svg>
+          <svg class="arrow" viewBox="0 0 24 12" aria-hidden="true">
+            <path d="M0 6h22M17 1l5 5-5 5" />
+          </svg>
         </a>
         <a class="btn btn--quiet" href="https://moonlight.spaceylon.com/">Read the Legend</a>
       </div>
-      <p class="hero__note">Spa Ceylon’s festive collection for 2026. This season, the legend comes alive once more.</p>
-      <a class="hero__cue" href="#legend">
-        The Legend
-        <svg viewBox="0 0 12 28" aria-hidden="true"><path d="M6 1v25M1.5 21.5 6 26l4.5-4.5"/></svg>
-      </a>
-    </section>
 
-    <section id="legend" class="legend" aria-labelledby="legend-title">
-      <div class="legend__inner">
-        <figure class="legend__book">
-          <a class="book" href="https://moonlight.spaceylon.com/" aria-label="Read The Legend of the Moonlight Lilies">
-            <img src="assets/img/legend-cover.webp" width="720" height="1019" loading="lazy"
-                 alt="Cover of The Legend of the Moonlight Lilies: the Queen seated by a lake of glowing lilies.">
-          </a>
-          <figcaption>The complete illustrated story.</figcaption>
-        </figure>
-
-        <div class="legend__story">
-          <h2 id="legend-title">The Legend of the Moonlight&nbsp;Lilies</h2>
-          <p class="legend__dek">A queen, a sacred lake, and a beauty meant to be shared: the tale behind this year’s gifts.</p>
-
-          <ol class="lake">
-            <li class="lake__beat">
-              <svg class="lamp" viewBox="0 0 40 40" aria-hidden="true">
-                <ellipse class="lamp__pool" cx="20" cy="27" rx="19" ry="12"/>
-                <path class="lamp__flame" d="M20 3.5c2.6 3.4 3.9 6 3.9 8.1a3.9 3.9 0 0 1-7.8 0c0-2.1 1.3-4.7 3.9-8.1z"/>
-                <path class="lamp__petal lamp__petal--side" d="M5.5 19.5c5 .4 8.6 2.9 10.6 7.6.6 1.4-.4 2.7-1.9 2.6C9.8 29.4 6.4 25.6 5.5 19.5z"/>
-                <path class="lamp__petal lamp__petal--side" d="M34.5 19.5c-5 .4-8.6 2.9-10.6 7.6-.6 1.4.4 2.7 1.9 2.6 4.4-.3 7.8-4.1 8.7-10.2z"/>
-                <path class="lamp__petal" d="M20 16.5c3.1 3 4.4 6.3 4.4 9.8 0 2.4-2 4.2-4.4 4.2s-4.4-1.8-4.4-4.2c0-3.5 1.3-6.8 4.4-9.8z"/>
-                <path class="lamp__water" d="M6 34.5h28M11 37.5h18"/>
-              </svg>
-              <h3>The Elder’s Tale</h3>
-              <p>In the Kingdom of Ceylon, a young princess grew up on an old promise: the Moonlight Lilies bloom only when a great blessing draws near. Years later, crowned Queen, she still carried it in her heart.</p>
-            </li>
-            <li class="lake__beat">
-              <svg class="lamp" viewBox="0 0 40 40" aria-hidden="true">
-                <ellipse class="lamp__pool" cx="20" cy="27" rx="19" ry="12"/>
-                <path class="lamp__flame" d="M20 3.5c2.6 3.4 3.9 6 3.9 8.1a3.9 3.9 0 0 1-7.8 0c0-2.1 1.3-4.7 3.9-8.1z"/>
-                <path class="lamp__petal lamp__petal--side" d="M5.5 19.5c5 .4 8.6 2.9 10.6 7.6.6 1.4-.4 2.7-1.9 2.6C9.8 29.4 6.4 25.6 5.5 19.5z"/>
-                <path class="lamp__petal lamp__petal--side" d="M34.5 19.5c-5 .4-8.6 2.9-10.6 7.6-.6 1.4.4 2.7 1.9 2.6 4.4-.3 7.8-4.1 8.7-10.2z"/>
-                <path class="lamp__petal" d="M20 16.5c3.1 3 4.4 6.3 4.4 9.8 0 2.4-2 4.2-4.4 4.2s-4.4-1.8-4.4-4.2c0-3.5 1.3-6.8 4.4-9.8z"/>
-                <path class="lamp__water" d="M6 34.5h28M11 37.5h18"/>
-              </svg>
-              <h3>The Lake Awakes</h3>
-              <p>On the night of the full moon she led a procession of lamps to the sacred waters. As the moon rose, the lilies opened one at a time, until the whole lake shone with flowers of light.</p>
-            </li>
-            <li class="lake__beat">
-              <svg class="lamp" viewBox="0 0 40 40" aria-hidden="true">
-                <ellipse class="lamp__pool" cx="20" cy="27" rx="19" ry="12"/>
-                <path class="lamp__flame" d="M20 3.5c2.6 3.4 3.9 6 3.9 8.1a3.9 3.9 0 0 1-7.8 0c0-2.1 1.3-4.7 3.9-8.1z"/>
-                <path class="lamp__petal lamp__petal--side" d="M5.5 19.5c5 .4 8.6 2.9 10.6 7.6.6 1.4-.4 2.7-1.9 2.6C9.8 29.4 6.4 25.6 5.5 19.5z"/>
-                <path class="lamp__petal lamp__petal--side" d="M34.5 19.5c-5 .4-8.6 2.9-10.6 7.6-.6 1.4.4 2.7 1.9 2.6 4.4-.3 7.8-4.1 8.7-10.2z"/>
-                <path class="lamp__petal" d="M20 16.5c3.1 3 4.4 6.3 4.4 9.8 0 2.4-2 4.2-4.4 4.2s-4.4-1.8-4.4-4.2c0-3.5 1.3-6.8 4.4-9.8z"/>
-                <path class="lamp__water" d="M6 34.5h28M11 37.5h18"/>
-              </svg>
-              <h3>Not Ours to Possess</h3>
-              <p>The court wanted the blooms for the palace gardens and the temples. The Queen refused. No one would take a single lily: they bloomed for everyone, and in the water they would stay.</p>
-            </li>
-            <li class="lake__beat">
-              <svg class="lamp" viewBox="0 0 40 40" aria-hidden="true">
-                <ellipse class="lamp__pool" cx="20" cy="27" rx="19" ry="12"/>
-                <path class="lamp__flame" d="M20 3.5c2.6 3.4 3.9 6 3.9 8.1a3.9 3.9 0 0 1-7.8 0c0-2.1 1.3-4.7 3.9-8.1z"/>
-                <path class="lamp__petal lamp__petal--side" d="M5.5 19.5c5 .4 8.6 2.9 10.6 7.6.6 1.4-.4 2.7-1.9 2.6C9.8 29.4 6.4 25.6 5.5 19.5z"/>
-                <path class="lamp__petal lamp__petal--side" d="M34.5 19.5c-5 .4-8.6 2.9-10.6 7.6-.6 1.4.4 2.7 1.9 2.6 4.4-.3 7.8-4.1 8.7-10.2z"/>
-                <path class="lamp__petal" d="M20 16.5c3.1 3 4.4 6.3 4.4 9.8 0 2.4-2 4.2-4.4 4.2s-4.4-1.8-4.4-4.2c0-3.5 1.3-6.8 4.4-9.8z"/>
-                <path class="lamp__water" d="M6 34.5h28M11 37.5h18"/>
-              </svg>
-              <h3>From Many Hands</h3>
-              <p>Instead, she called the finest hands in the land. Painters, weavers, jewellers, potters and perfumers studied the lilies and carried their beauty into silk, gold, clay and fragrance, without disturbing a petal.</p>
-            </li>
-            <li class="lake__beat">
-              <svg class="lamp" viewBox="0 0 40 40" aria-hidden="true">
-                <ellipse class="lamp__pool" cx="20" cy="27" rx="19" ry="12"/>
-                <path class="lamp__flame" d="M20 3.5c2.6 3.4 3.9 6 3.9 8.1a3.9 3.9 0 0 1-7.8 0c0-2.1 1.3-4.7 3.9-8.1z"/>
-                <path class="lamp__petal lamp__petal--side" d="M5.5 19.5c5 .4 8.6 2.9 10.6 7.6.6 1.4-.4 2.7-1.9 2.6C9.8 29.4 6.4 25.6 5.5 19.5z"/>
-                <path class="lamp__petal lamp__petal--side" d="M34.5 19.5c-5 .4-8.6 2.9-10.6 7.6-.6 1.4.4 2.7 1.9 2.6 4.4-.3 7.8-4.1 8.7-10.2z"/>
-                <path class="lamp__petal" d="M20 16.5c3.1 3 4.4 6.3 4.4 9.8 0 2.4-2 4.2-4.4 4.2s-4.4-1.8-4.4-4.2c0-3.5 1.3-6.8 4.4-9.8z"/>
-                <path class="lamp__water" d="M6 34.5h28M11 37.5h18"/>
-              </svg>
-              <h3>Gifts of Love and Gratitude</h3>
-              <p>Their creations travelled from palace to village, shared as gifts between families and friends. The lake’s wonder became something people could give one another, and that is where this collection begins.</p>
-            </li>
-          </ol>
-
-          <div class="legend__end">
-            <a class="btn btn--quiet" href="https://moonlight.spaceylon.com/">Read the full Legend</a>
-            <a class="textlink" href="https://lk.spaceylon.com/pages/festive-2026">or explore the range
-              <svg class="arrow" viewBox="0 0 24 12" aria-hidden="true"><path d="M0 6h22M17 1l5 5-5 5"/></svg>
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="collection" class="collection" aria-labelledby="collection-title">
-      <img class="collection__lily" src="assets/svg/gold-lily-flower.svg" alt="" width="72" height="72">
-      <h2 id="collection-title">The Collection</h2>
-      <p class="collection__dek">Like the artisans in the legend, each gift carries the lilies’ beauty into something you can give.</p>
-      <a class="btn btn--primary btn--large" href="https://lk.spaceylon.com/pages/festive-2026">
-        View the collection
-        <svg class="arrow" viewBox="0 0 24 12" aria-hidden="true"><path d="M0 6h22M17 1l5 5-5 5"/></svg>
-      </a>
     </section>
   </main>
-
-  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
-    <defs>
-      <radialGradient id="lamp-glow" cx="50%" cy="55%" r="50%">
-        <stop offset="0" stop-color="#fcb6a0" stop-opacity=".5"/>
-        <stop offset="1" stop-color="#fcb6a0" stop-opacity="0"/>
-      </radialGradient>
-    </defs>
-  </svg>
 </body>
+
 </html>
