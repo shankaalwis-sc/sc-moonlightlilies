@@ -1,6 +1,6 @@
 ---
 name: Moonlight Lilies
-description: Spa Ceylon Festive 2026. The key visual's palace night on one screen, lit by lantern blush and lettered in cream-gold Trajan.
+description: Spa Ceylon Festive 2026. The key visual's palace night on one screen, lit by lantern blush and with the key video filling the screen and cream-gold Trajan lettering.
 colors:
   night-950: "#121118"
   night-900: "#1b1a23"
@@ -13,8 +13,23 @@ colors:
   text: "#ecdfc9"
   rule-strong: "rgb(211 175 55 / 0.55)"
 typography:
-  label:
+  kicker:
+    fontFamily: "Goudos, \"Goudy Old Style\", \"Sorts Mill Goudy\", Georgia, serif"
+    fontSize: "clamp(1.125rem, 0.8rem + 1.1vw, 2rem)"
+    fontWeight: 400
+    lineHeight: 1.2
+  name:
     fontFamily: "\"Trajan Pro 3\", \"Trajan Pro\", Trajan, \"Cinzel\", \"Times New Roman\", serif"
+    fontSize: "clamp(1.75rem, 0.9rem + 3.2vw, 4rem)"
+    fontWeight: 400
+    lineHeight: 1.05
+    letterSpacing: "0.04em"
+  tagline:
+    fontFamily: "Goudos, \"Goudy Old Style\", \"Sorts Mill Goudy\", Georgia, serif"
+    fontSize: "clamp(1rem, 0.8rem + 0.6vw, 1.5rem)"
+    fontWeight: 400
+    lineHeight: 1.2
+    fontFamily: "\"Trajan Pro 3\", \"Trajan Pro\", Trajan, \"Cinzel\", \"Times New Roman\", serif"
     fontSize: "clamp(0.8125rem, 0.7rem + 0.25vw, 1.125rem)"
     fontWeight: 400
     lineHeight: 1.2
@@ -53,9 +68,9 @@ components:
 
 **Creative North Star: "The Night of the Legend"**
 
-The page is the palace night of the supplied key visual, and nothing more: one screen of dark slate sky with the key visual centred in it, its edges dissolving into the night. Lettering is cream-gold Trajan capitals, the same voice as the title on the banner; the key visual carries every other word. Colour beyond night and gold arrives only as light: the low lantern-blush glow behind the actions, the warm underglow beneath the primary button, the coral of a text selection.
+The page is the palace night of the supplied key visual, and nothing more: one screen filled edge to edge by the key video, darkened at top and bottom. Lettering is cream-gold: Trajan capitals for the name and labels, Goudy italic for "Presenting" and the tagline, as lettered on the banner. Colour beyond night and gold arrives only as light: the low lantern-blush glow behind the actions, the warm underglow beneath the primary button, the coral of a text selection.
 
-The world is brief-pinned to the client's key visual ("use the same fonts same colors"), so the banner is the source of truth for hue, type and atmosphere. Density is minimal and ceremonial: one plate, two actions. Ornament is restricted to the world's own materials: fine gold hairlines and a single stroked arrow.
+The world is brief-pinned to the client's key visual ("use the same fonts same colors"), so the banner remains the source of truth for hue, type and atmosphere even though the page now shows the key video. Density is minimal and ceremonial: one video, one title, two actions. Ornament is restricted to the world's own materials: fine gold hairlines and a single stroked arrow.
 
 **Key Characteristics:**
 - One night-slate ground filling exactly one screen; no light grounds, no further sections.
@@ -94,9 +109,9 @@ A night palette lit from within: two night tones, a three-step gold for letterin
 ## Typography
 
 **Display Font:** Trajan Pro 3 / Trajan Pro / Trajan (licensed, used when installed), with self-hosted Cinzel as the stand-in
-**Body Font:** Goudos / Goudy Old Style (licensed) stays the body stack, but no body text ships, so no Goudy font is self-hosted or downloaded
+**Body Font:** Goudos / Goudy Old Style (licensed, used when installed), with self-hosted Sorts Mill Goudy italic as the stand-in; italic only
 
-**Character:** Roman inscriptional capitals. Trajan carries the brand's authority at weight 400 with open tracking. The page title is the key visual itself: the h1 wraps the picture, and its alt text carries the baked-in words, including the italic "Presenting" and tagline lettered on the art.
+**Character:** Roman inscriptional capitals over an old-style italic. Trajan carries the name and labels at weight 400 with open tracking; Goudy italic carries "Presenting" and the tagline. The h1 is live text on the video's top scrim, recreating the banner's lettering: kicker clamp(1.125rem, 0.8rem + 1.1vw, 2rem), name clamp(1.75rem, 0.9rem + 3.2vw, 4rem) uppercase at 0.04em, tagline clamp(1rem, 0.8rem + 0.6vw, 1.5rem) at 30ch.
 
 ### Hierarchy
 - **Label** (400, clamp(0.8125rem, 0.7rem + 0.25vw, 1.125rem), 1.2, 0.2em, uppercase): button text. The label size drives the whole button, which is sized in em.
@@ -108,11 +123,11 @@ A night palette lit from within: two night tones, a three-step gold for letterin
 
 ## Layout
 
-One centred column on one screen. The hero fills exactly the viewport (min-height of the vh token: 100svh, falling back to 100vh), stacks the plate and the actions as a centred column, and pads clamp(1rem, 4vh, 3rem) top and bottom. Gutters are fluid (gutter token) and apply to the actions.
+One centred column on one screen. The hero fills exactly the viewport (min-height of the vh token: 100svh, falling back to 100vh), places the title at the top and the actions at the bottom over the full-screen video, and pads clamp(1rem, 4vh, 3rem) top and bottom. Gutters are fluid (gutter token) and apply to the actions.
 
-The plate is sized to the screen so the actions always fit. A reserve of clamp(6rem, 18% of the screen height, 10rem) is held back for them. On landscape screens the 3:1 plate is min(112%, 150rem, (screen height − reserve) × 3) wide: a short laptop narrows it, a tall screen lets it overscan the width by up to 12% (trimming only the feathered curtain edges), and it never upscales past the artwork's 2400px. Portrait screens load the 2:1 mobile key visual and show it at 1.6:1, object-position 62% 50%, at min(100%, (screen height − reserve) × 1.6), so the title, the gifts and the queen's face stay in frame.
+The video fills the whole screen (object-fit: cover), cropping to the screen's shape. The title sits at the top and the actions at the bottom (space-between, padded clamp(1.5rem, 6vh, 4rem) above and clamp(1.5rem, 7vh, 4.5rem) below), each over a night scrim: a vertical gradient from 82% night at the top, clear from 45% to 62%, back to 85% night at the bottom.
 
-The actions overlap the plate's lower fade by 5% of its width, clamped between 1.25rem and 5rem, with a fluid gap of clamp(1rem, 0.6rem + 0.5vw, 1.5rem). At 760px and below they stack full-width up to 24rem and overlap by a fixed 1.5rem.
+The actions use a fluid gap of clamp(1rem, 0.6rem + 0.5vw, 1.5rem). At 760px and below they stack full-width up to 24rem.
 
 ### Named Rules
 **The One Screen Rule.** The page is one full-screen hero at every size. Nothing sits above or below it.
@@ -129,7 +144,7 @@ Depth comes from light, not lifted surfaces. The hero is a flat night ground sha
 
 ## Shapes
 
-Nearly square. Buttons turn a 2px corner; the primary button's printed inner rule sits 4px inside at 1px radius. The key visual is clipped by gradient masks, never by a frame or radius. On landscape it feathers over 7% each side and dissolves vertically from 6% to 66%, fading out by 99%; on portrait the side feather tightens to 4% and the vertical holds from 5% to 72%. Lines are 1px gold hairlines. The stroked arrow (1.1 stroke, round caps and joins) is the only drawn mark.
+Nearly square. Buttons turn a 2px corner; the primary button's printed inner rule sits 4px inside at 1px radius. The video runs edge to edge with no mask or frame; the night scrim does the work. Lines are 1px gold hairlines. The stroked arrow (1.1 stroke, round caps and joins) is the only drawn mark.
 
 ## Components
 
@@ -141,8 +156,8 @@ Printed and lamp-lit: a cream card with an engraved rule, sitting over warm ligh
 - **Quiet:** night-950 at 80% with a rule-strong border and gold-50 text; hover tints the ground with old gold at 12% and moves the border to gold-300.
 
 ### Feathered Key-Visual Hero (signature)
-The whole page. The h1 wraps a picture: portrait screens get the 1080x540 mobile key visual, landscape screens a 1200w/2400w srcset of the 3:1 plate; each orientation preloads only its own image. The plate is masked to dissolve into the night on all sides and sized as described in Layout. Below it sit Explore the range (primary) and Read the Legend (quiet).
-- **Unveil:** on load the plate brightens from 0.4 and saturates from 0.7 while its scale settles from 1.03 (2.4s): the lamps come up on the palace.
+The whole page. The key video (1080x1080, about 15s, served from the Spa Ceylon Shopify CDN; autoplay, muted, looping, playsinline, aria-hidden) fills the screen behind a night scrim. The h1 is live text at the top with a soft dark text shadow; Explore the range (primary) and Read the Legend (quiet) sit at the bottom.
+- **Unveil:** on load the video brightens from 0.4 and saturates from 0.7 while its scale settles from 1.03 (2.4s): the lamps come up.
 - **Rise:** the actions rise 10px from 30% opacity after 0.8s (1.4s).
 - **Reduced motion:** both animations run only under prefers-reduced-motion: no-preference. Under reduce, transitions and animations collapse to 0.01ms with one iteration.
 
@@ -154,16 +169,16 @@ The whole page. The h1 wraps a picture: portrait screens get the 1080x540 mobile
 - **Do** draw borders and rules as 1px gold hairlines.
 - **Do** keep lotus and blush as light: glows, underglow, selection.
 - **Do** keep one primary (cream-gold) action, paired with at most one quiet button.
-- **Do** size the plate to the screen so the actions stay on the first screen.
+- **Do** keep text on the scrimmed top and bottom bands, leaving the middle of the video clear.
 - **Do** gate entrance motion behind prefers-reduced-motion.
 
 ### Don't:
 - **Don't** add sections below the hero; the page is one full-screen hero (user direction, 22 October 2026).
 - **Don't** add a header, footer or top bar (user direction, 22 October 2026).
 - **Don't** list products or prices on the page (user direction).
-- **Don't** serve phones the desktop plate in portrait; they load the dedicated mobile key visual (user direction).
+- **Don't** place text in the middle of the video, or remove the scrim behind the title and actions.
 - **Don't** fill a section, card or button with lotus coral or blush.
 - **Don't** introduce a light ground.
 - **Don't** bold Trajan or set the display stack without its licensed faces first.
-- **Don't** frame or round the key visual; it dissolves into the night through masks.
+- **Don't** frame, round or shrink the video; it fills the screen (user direction).
 - **Don't** add ornament outside the world's own set: gold hairlines and the stroked arrow.

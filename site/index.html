@@ -18,12 +18,8 @@
     content="Presenting Moonlight Lilies: a curated collection of gifts for those who mean the most.">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" href="favicon.ico" sizes="16x16 32x32 48x48">
-  <!-- Each screen shape preloads only its own key visual. -->
-  <link rel="preload" as="image" fetchpriority="high" media="(orientation: portrait)"
-    href="assets/img/banner-mobile.webp">
-  <link rel="preload" as="image" fetchpriority="high" media="(orientation: landscape)"
-    imagesrcset="assets/img/banner-1200.webp 1200w, assets/img/banner.webp 2400w" imagesizes="112vw">
   <link rel="preload" href="assets/fonts/cinzel-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/sorts-mill-goudy-italic-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 
@@ -31,13 +27,14 @@
   <main>
     <section class="hero" aria-labelledby="hero-title">
       <h1 id="hero-title" class="hero__title">
-        <picture>
-          <source media="(orientation: portrait)" srcset="assets/img/banner-mobile.webp" width="1080" height="540">
-          <img class="hero__art" src="assets/img/banner.webp" width="2400" height="800" fetchpriority="high"
-            srcset="assets/img/banner-1200.webp 1200w, assets/img/banner.webp 2400w" sizes="112vw"
-            alt="Presenting Moonlight Lilies. A curated collection of gifts for those who mean the most.">
-        </picture>
+        <span class="hero__kicker">Presenting</span>
+        <span class="hero__name">Moonlight Lilies</span>
+        <span class="hero__tag">A curated collection of gifts for those who mean the most.</span>
       </h1>
+      <div class="hero__stage">
+        <video class="hero__video" src="https://cdn.shopify.com/videos/c/o/v/ae4c3273ad1a479cbd5ddd2ca6b8742b.mp4"
+          width="1080" height="1080" autoplay muted loop playsinline preload="auto" aria-hidden="true"></video>
+      </div>
       <div class="hero__actions">
         <a class="btn btn--primary" href="https://lk.spaceylon.com/pages/festive-2026">
           Explore the range
@@ -50,6 +47,14 @@
 
     </section>
   </main>
+  <script>
+    // Respect reduced motion: hold the video on its first frame.
+    if (matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      const v = document.querySelector(".hero__video");
+      v.removeAttribute("autoplay");
+      v.pause();
+    }
+  </script>
 </body>
 
 </html>

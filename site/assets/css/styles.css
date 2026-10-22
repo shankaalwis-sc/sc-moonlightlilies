@@ -7,6 +7,13 @@
   font-weight: 400 900;
   font-display: swap;
 }
+@font-face {
+  font-family: "Sorts Mill Goudy";
+  src: url("../fonts/sorts-mill-goudy-italic-latin.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
 
 :root {
   color-scheme: dark;
@@ -28,11 +35,11 @@
   --text: #ecdfc9;
   --rule-strong: rgb(211 175 55 / 0.55);
 
-  /* Trajan for the labels: the licensed face wins when installed, and Cinzel is the
-     self-hosted stand-in. Goudy stays the body stack, but no Goudy text ships, so no
-     Goudy font is downloaded. */
+  /* Trajan for the name and labels, Goudy italic for "Presenting" and the tagline, as
+     lettered on the key visual. Licensed faces win when installed; Cinzel and Sorts
+     Mill Goudy italic are the self-hosted stand-ins. */
   --font-display: "Trajan Pro 3", "Trajan Pro", Trajan, "Cinzel", "Times New Roman", serif;
-  --font-body: Goudos, "Goudy Old Style", Georgia, serif;
+  --font-body: Goudos, "Goudy Old Style", "Sorts Mill Goudy", Georgia, serif;
 
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
   --gutter: clamp(1rem, 4vw, 3rem);
@@ -184,51 +191,77 @@ a {
   border-color: var(--gold-300);
 }
 
-/* Hero: the key visual on its own night, filling one screen ---------------------- */
+/* Hero: the key video fills the whole screen ----------------------------------- */
 
-/* The banner takes the widest size that still leaves room for the actions, so a short
-   laptop screen keeps them in view and a tall one gets a larger plate. It may overscan
-   the width by up to 12%, which trims only the feathered curtain edges, and never
-   upscales past the artwork's own 2400px. */
+/* The title rides the top of the screen and the actions the bottom, each on a night
+   scrim, so the middle of the video stays clear and no text sits on bright petals. */
 .hero {
-  --hero-reserve: clamp(6rem, calc(var(--vh) * 0.18), 10rem);
-  --hero-w: min(112%, 150rem, calc((var(--vh) - var(--hero-reserve)) * 3));
   position: relative;
   isolation: isolate;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   min-height: var(--vh);
-  padding: clamp(1rem, 4vh, 3rem) 0;
+  padding: clamp(1.5rem, 6vh, 4rem) 0 clamp(1.5rem, 7vh, 4.5rem);
   text-align: center;
-  background:
-    radial-gradient(55% 45% at 50% 62%, rgb(252 182 160 / 0.1), transparent 72%),
-    var(--night-900);
+  background: var(--night-900);
   overflow: hidden;
 }
 
-.hero__title {
-  flex: none;
-  width: var(--hero-w);
+.hero__stage {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+}
+.hero__stage::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(rgb(18 17 24 / 0.82), rgb(18 17 24 / 0.35) 30%, transparent 45%, transparent 62%, rgb(18 17 24 / 0.4) 76%, rgb(18 17 24 / 0.85));
 }
 
-.hero__title picture {
+.hero__video {
   display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background: var(--night-900);
 }
 
-.hero__art {
-  width: 100%;
-  aspect-ratio: 3 / 1;
-  object-fit: cover;
-  -webkit-mask-image:
-    linear-gradient(90deg, transparent, #000 7%, #000 93%, transparent),
-    linear-gradient(transparent, #000 6%, #000 66%, transparent 99%);
-  -webkit-mask-composite: source-in;
-  mask-image:
-    linear-gradient(90deg, transparent, #000 7%, #000 93%, transparent),
-    linear-gradient(transparent, #000 6%, #000 66%, transparent 99%);
-  mask-composite: intersect;
+/* The banner's lettering, on the top scrim. */
+.hero__title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.35em;
+  padding-inline: var(--gutter);
+  text-shadow: 0 2px 18px rgb(18 8 14 / 0.7);
+}
+
+.hero__kicker,
+.hero__tag {
+  font-family: var(--font-body);
+  font-style: italic;
+  font-weight: 400;
+  color: var(--gold-50);
+  line-height: 1.2;
+}
+.hero__kicker {
+  font-size: clamp(1.125rem, 0.8rem + 1.1vw, 2rem);
+}
+.hero__name {
+  font-size: clamp(1.75rem, 0.9rem + 3.2vw, 4rem);
+  line-height: 1.05;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  text-wrap: balance;
+}
+.hero__tag {
+  max-width: 30ch;
+  font-size: clamp(1rem, 0.8rem + 0.6vw, 1.5rem);
+  text-wrap: balance;
 }
 
 .hero__actions {
@@ -237,21 +270,20 @@ a {
   flex-wrap: wrap;
   justify-content: center;
   gap: clamp(1rem, 0.6rem + 0.5vw, 1.5rem);
-  /* Overlap the banner's lower fade by a fixed share of the banner's own width. */
-  margin-top: clamp(-5rem, calc(var(--hero-w) * -0.05), -1.25rem);
   padding-inline: var(--gutter);
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .hero__art {
+  .hero__video {
     animation: unveil 2.4s var(--ease-out) both;
   }
+  .hero__title,
   .hero__actions {
     animation: rise 1.4s var(--ease-out) 0.8s both;
   }
 }
 
-/* The lamps come up on the palace. */
+/* The lamps come up. */
 @keyframes unveil {
   from {
     filter: brightness(0.4) saturate(0.7);
@@ -268,28 +300,6 @@ a {
 
 /* Responsive ---------------------------------------------------------------- */
 
-/* Portrait screens (phones, tablets held upright) load the 2:1 mobile key visual and
-   show it at 1.6:1. The crop trims only the curtain edges and leans right (62%) so the
-   queen's face stays clear of the edge while the gifts and lettering stay whole.
-   Near-square windows narrow it so the actions still fit. */
-@media (orientation: portrait) {
-  .hero {
-    --hero-w: min(100%, calc((var(--vh) - var(--hero-reserve)) * 1.6));
-  }
-  .hero__art {
-    aspect-ratio: 1.6;
-    object-position: 62% 50%;
-    -webkit-mask-image:
-      linear-gradient(90deg, transparent, #000 4%, #000 96%, transparent),
-      linear-gradient(transparent, #000 5%, #000 72%, transparent 99%);
-    -webkit-mask-composite: source-in;
-    mask-image:
-      linear-gradient(90deg, transparent, #000 4%, #000 96%, transparent),
-      linear-gradient(transparent, #000 5%, #000 72%, transparent 99%);
-    mask-composite: intersect;
-  }
-}
-
 @media (max-width: 760px) {
   body {
     font-size: 1.125rem;
@@ -298,7 +308,7 @@ a {
     flex-direction: column;
     align-items: stretch;
     width: min(100%, 24rem);
-    margin: -1.5rem auto 0;
+    margin-inline: auto;
   }
 }
 
