@@ -17,7 +17,7 @@
   <link rel="icon" href="favicon.ico" sizes="16x16 32x32 48x48">
   <link rel="preload" as="image" fetchpriority="high"
         imagesrcset="assets/img/banner-1200.webp 1200w, assets/img/banner.webp 2400w"
-        imagesizes="(max-width: 760px) 231vw, 100vw">
+        imagesizes="(orientation: portrait) 231vw, 100vw">
   <link rel="preload" href="assets/fonts/cinzel-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/sorts-mill-goudy-italic-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="assets/css/styles.css">
@@ -30,7 +30,7 @@
       <h1 id="hero-title" class="hero__title">
         <img class="hero__art" src="assets/img/banner.webp" width="2400" height="800" fetchpriority="high"
              srcset="assets/img/banner-1200.webp 1200w, assets/img/banner.webp 2400w"
-             sizes="(max-width: 760px) 231vw, 100vw"
+             sizes="(orientation: portrait) 231vw, 100vw"
              alt="Presenting Moonlight Lilies. A curated collection of gifts for those who mean the most.">
       </h1>
       <div class="hero__actions">
@@ -41,6 +41,10 @@
         <a class="btn btn--quiet" href="https://moonlight.spaceylon.com/">Read the Legend</a>
       </div>
       <p class="hero__note">Spa Ceylon’s festive collection for 2026. This season, the legend comes alive once more.</p>
+      <a class="hero__cue" href="#legend">
+        The Legend
+        <svg viewBox="0 0 12 28" aria-hidden="true"><path d="M6 1v25M1.5 21.5 6 26l4.5-4.5"/></svg>
+      </a>
     </section>
 
     <section id="legend" class="legend" aria-labelledby="legend-title">

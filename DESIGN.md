@@ -55,7 +55,7 @@ typography:
     lineHeight: 1.6
   label:
     fontFamily: "\"Trajan Pro 3\", \"Trajan Pro\", Trajan, Cinzel, \"Times New Roman\", serif"
-    fontSize: "0.8125rem"
+    fontSize: "clamp(0.8125rem, 0.7rem + 0.25vw, 1.125rem)"
     fontWeight: 400
     lineHeight: 1.2
     letterSpacing: "0.2em"
@@ -73,8 +73,8 @@ components:
     textColor: "{colors.ink}"
     typography: "{typography.label}"
     rounded: "{rounded.button}"
-    padding: "0.95rem 1.9rem 0.85rem"
-    height: "3.375rem"
+    padding: "1.17em 2.34em 1.05em"
+    height: "4.15em"
   button-primary-hover:
     backgroundColor: "{colors.gold-50}"
     textColor: "{colors.ink}"
@@ -82,15 +82,15 @@ components:
     backgroundColor: "{colors.gold-100}"
     textColor: "{colors.ink}"
     rounded: "{rounded.button}"
-    padding: "0.95rem 2.6rem 0.85rem"
-    height: "3.875rem"
+    padding: "1.17em 2.97em 1.05em"
+    height: "4.43em"
   button-quiet:
     backgroundColor: "rgb(18 17 24 / 0.8)"
     textColor: "{colors.gold-50}"
     typography: "{typography.label}"
     rounded: "{rounded.button}"
-    padding: "0.95rem 1.9rem 0.85rem"
-    height: "3.375rem"
+    padding: "1.17em 2.34em 1.05em"
+    height: "4.15em"
   button-quiet-hover:
     backgroundColor: "rgb(211 175 55 / 0.12)"
     textColor: "{colors.gold-50}"
@@ -166,8 +166,8 @@ A night palette lit from within: two dark grounds, a five-step gold for letterin
 - **Title** (400, clamp(1.15rem, 1.6vw, 1.375rem), 0.1em): chapter titles beside each lamp.
 - **Dek** (italic, clamp(1.25rem, 1.9vw, 1.5rem), 1.45, 36 to 38ch): the line under a section title, in text-soft.
 - **Body** (400, 1.1875rem, 1.6; 1.125rem at 760px and below; 60ch): chapter text.
-- **Note / Caption** (italic, 1.125rem and 1.0625rem, text-soft, 48ch): the hero note and the book caption.
-- **Label** (400, 0.8125rem, 0.2em, uppercase): button text; 0.875rem on the large button, 0.16em tracking on phones.
+- **Note / Caption** (italic, text-soft, 48ch): the hero note, fluid at clamp(1.0625rem, 0.95rem + 0.3vw, 1.5rem), and the book caption at 1.0625rem.
+- **Label** (400, clamp(0.8125rem, 0.7rem + 0.25vw, 1.125rem), 0.2em, uppercase): button text; clamp(0.875rem, 0.75rem + 0.3vw, 1.1875rem) on the large button, 0.8125rem with 0.16em tracking on phones. The hero's scroll cue uses the same voice at clamp(0.6875rem, 0.55rem + 0.2vw, 0.875rem), 0.26em.
 
 ### Named Rules
 **The Licensed First Rule.** Every stack names the brand's licensed face first and its free stand-in second. Never ship a stack that skips to a system serif for display.
@@ -178,9 +178,9 @@ A night palette lit from within: two dark grounds, a five-step gold for letterin
 
 ## Layout
 
-Centred, ceremonial and wide. Gutters are fluid (gutter token), content width caps at the measure token (72rem). The hero is full-bleed: the 3:1 key visual spans the viewport with its edges feathered into the night, and the actions overlap its lower fade by up to 4.75rem. The Legend is a two-column spread (book column minmax(15rem, 24rem), story column fills), with the book sticky at 3rem; at 960px it collapses to one column with the book centred at min(17rem, 64vw). The close is a single centred column.
+Centred, ceremonial and wide. Gutters are fluid (gutter token), content width caps at the measure token (72rem). The hero fills exactly one screen (100svh, falling back to 100vh) and centres its contents in it: the 3:1 key visual, sized to the screen, with its edges feathered into the night and the actions overlapping its lower fade by 5% of its width (clamped between 1.25rem and 5rem). The Legend is a two-column spread (book column minmax(15rem, 24rem), story column fills), with the book sticky at 3rem; at 960px it collapses to one column with the book centred at min(17rem, 64vw). The close is a single centred column.
 
-Vertical rhythm is generous: sections pad clamp(4rem, 8vw, 7rem) to clamp(6rem, 12vw, 10rem); chapters are separated by the beat token. At 760px and below the hero crops to a 1.3:1 window on the lettering (object-position 55% 50%), and buttons stack full-width up to 24rem.
+Vertical rhythm is generous: sections pad clamp(4rem, 8vw, 7rem) to clamp(6rem, 12vw, 10rem); chapters are separated by the beat token. On portrait screens the hero crops to a 1.3:1 window on the lettering (object-position 55% 50%). At 760px and below, buttons stack full-width up to 24rem. On landscape screens 520px tall or less, the scroll cue is dropped so the first screen still fits.
 
 ## Elevation & Depth
 
@@ -201,11 +201,11 @@ Nearly square. Buttons turn a 2px corner; the primary button's printed inner rul
 
 ### Buttons
 Printed and lamp-lit: a cream card with an engraved rule, sitting over warm light.
-- **Shape:** gently squared (2px), 1px border, min height 3.375rem.
-- **Primary:** gold-100 fill, ink text, label type, an inset 1px oxblood rule at 22% drawn 4px inside the edge, the lamplight underglow. An inline SVG arrow (1.5rem by 0.75rem, 1.1 stroke) follows the label.
+- **Shape:** gently squared (2px), 1px border. Padding, height, gap and arrow are all in em (min height 4.15em, padding 1.17em 2.34em 1.05em), so the whole button grows with its fluid label on large displays.
+- **Primary:** gold-100 fill, ink text, label type, an inset 1px oxblood rule at 22% drawn 4px inside the edge, the lamplight underglow. An inline SVG arrow (1.85em by 0.92em, 1.1 stroke) follows the label.
 - **Hover / Focus:** primary brightens to gold-50 and lifts 2px with a stronger glow; the arrow travels 4px right; active presses down 1px. Focus is a 2px gold-300 outline at 4px offset. Transitions use ease-out cubic-bezier(0.16, 1, 0.3, 1), 0.3s for colour and 0.5s for lift.
 - **Quiet:** night-950 at 80% with a rule-strong border and gold-50 text; hover tints the ground with gold at 12% and the border to gold-300.
-- **Large:** 3.875rem tall, 2.6rem inline padding, 0.875rem label; used for the single closing action.
+- **Large:** 4.43em tall, 2.97em inline padding, the larger fluid label; used for the single closing action.
 
 ### Textlink
 An italic Goudy link in gold-100, underlined at 1px with gold at 45%, offset 0.28em, followed by the arrow. Hover moves to gold-50, the underline to gold-300, the arrow 3px right. Used as the lesser alternative beside a quiet button.
@@ -220,7 +220,7 @@ A 3.5rem inline SVG: a cream-gold flame, a lotus of one coral front petal and tw
 The Legend cover as an object: rotated -2.5deg, a gold 2px bottom edge, a deep black fall, and a spine shading gradient over its left 14% so it reads as a book, not a card. Hover straightens to -0.5deg and lifts 6px (0.8s). Captioned below in italic text-soft.
 
 ### Feathered Key-Visual Hero
-The banner is the page's h1 (its alt text carries the baked-in words), full width at 3:1, masked to dissolve into the night on all sides. On load it unveils: brightness rises from 0.4 and saturation from 0.7 while the scale settles from 1.03 (2.4s); the actions and note rise 10px from 30% opacity after 0.8s (1.4s). Phones crop to a 1.3:1 window centred on the lettering with srcset sizes at 231vw.
+The banner is the page's h1 (its alt text carries the baked-in words), at 3:1, masked to dissolve into the night on all sides. The hero is a full-screen stage. The banner's width is `min(112%, 150rem, (screen height − reserve) × 3)`, where the reserve is `clamp(12rem, 34% of the screen height, 17rem)` for the actions, note and cue. A short laptop screen therefore narrows the banner so everything stays on the first screen. A tall screen lets it overscan the width by up to 12%, trimming only the feathered curtain edges. It never upscales past the artwork's 2400px; wider screens centre it in the night. Below the note, a "The Legend" scroll cue (label voice, a 1px down arrow) sits in the hero's bottom padding and links to the Legend. On load the banner unveils: brightness rises from 0.4 and saturation from 0.7 while the scale settles from 1.03 (2.4s). The actions, note and cue rise 10px from 30% opacity after 0.8s (1.4s). Portrait screens crop to a 1.3:1 window centred on the lettering, with srcset sizes `(orientation: portrait) 231vw, 100vw`.
 
 ### Motion and Reduced Motion
 All animations run only under prefers-reduced-motion: no-preference. Under reduce, transitions and animations collapse to 0.01ms with one iteration and smooth scrolling is off, so lamps appear lit without kindling or flicker.
