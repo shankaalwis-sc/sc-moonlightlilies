@@ -10,11 +10,12 @@ Campaign landing page for Spa Ceylon's Festive 2026 gift collection, **Moonlight
 ```
 site/                    ← the deployable website (upload only this folder)
   index.html
+  favicon.ico            ← the same icon as moonlight.spaceylon.com
   assets/css/styles.css
   assets/js/main.js      ← lights the Legend's lamps as each chapter scrolls into view
   assets/fonts/          ← self-hosted Cinzel + Sorts Mill Goudy (stand-ins for Trajan and Goudy)
   assets/img/            ← key visual, Legend cover (WebP), social share image
-  assets/svg/            ← gold lily line art (favicon and Collection mark)
+  assets/svg/            ← gold lily line art (Collection mark)
 PRODUCT.md, DESIGN.md    ← product and design notes (not deployed)
 .impeccable/             ← design-process notes (not deployed)
 ```
